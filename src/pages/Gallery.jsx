@@ -1,31 +1,28 @@
 import { useState, useEffect } from "react";
 import AOS from "aos";
-import "aos/dist/aos.css"; // Import AOS styles
+import "aos/dist/aos.css";
 
-// Import all images dynamically using import.meta.glob
+// Import all images dynamically
 const imageModules = import.meta.glob('../assets/image/homepage/*.{webp,jpg,jpeg,png,svg}', {
   eager: true,
 });
 
-
 function Gallery() {
-
-
   const [modalImage, setModalImage] = useState(null);
   const [galleryImages, setGalleryImages] = useState([]);
+  const [loadedImages, setLoadedImages] = useState({});
 
-  // Initialize AOS
+  // AOS Initialization
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration in milliseconds
-      easing: 'ease-in-out', // Easing function for the animation
-      once: true, // Animate only once when it scrolls into view
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
     });
-
-    // Cleanup on component unmount
     return () => AOS.refresh();
   }, []);
 
+  // Load images
   useEffect(() => {
     const images = Object.keys(imageModules).map((key, index) => ({
       src: imageModules[key].default,
@@ -34,8 +31,10 @@ function Gallery() {
     setGalleryImages(images);
   }, []);
 
-
-
+  // Image load handler
+  const handleImageLoad = (index) => {
+    setLoadedImages((prev) => ({ ...prev, [index]: true }));
+  };
 
   return (
     <div>
@@ -45,6 +44,7 @@ function Gallery() {
           <p className="text-center mb-5 fs-5">
             Discover the elegance of Swathi Sri Residency through our gallery showcasing beautiful spaces and vibrant living.
           </p>
+
           <div className="row g-4">
             {galleryImages.map((img, idx) => (
               <div
@@ -58,26 +58,33 @@ function Gallery() {
                   style={{ height: "250px", cursor: "pointer" }}
                   onClick={() => setModalImage(img)}
                 >
+                  {/* Spinner Overlay */}
+                  {!loadedImages[idx] && (
+                    <div className="position-absolute top-50 start-50 translate-middle z-3">
+                      <div className="spinner-border text-dark" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Image */}
                   <img
                     src={img.src}
                     alt={img.alt}
                     loading="lazy"
+                    onLoad={() => handleImageLoad(idx)}
+                    onError={() => handleImageLoad(idx)}
                     className="img-fluid w-100 h-100"
                     style={{
                       objectFit: "cover",
                       transition: "filter 0.3s ease",
-                      filter: "blur(8px)",
-                    }}
-                    onLoad={(e) => {
-                      e.target.style.filter = "none";
+                      filter: loadedImages[idx] ? "none" : "blur(8px)",
                     }}
                   />
                 </div>
               </div>
             ))}
           </div>
-
-
         </div>
       </section>
 
