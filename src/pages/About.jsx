@@ -15,7 +15,7 @@ function About() {
       {/* About Intro Section */}
       <section className="py-5 bg-white" data-aos="fade-up">
         <div className="container">
-          <h2 className="text-center mb-4 fw-bold">AAbout Swathi Sri Residency</h2>
+          <h2 className="text-center mb-4 fw-bold">About Swathi Sri Residency</h2>
           <p className="text-center fs-5">
             Swathi Sri Residency is a modern residential complex located in a peaceful neighborhood. Our mission is to provide a comfortable, safe, and convenient living experience for individuals and families.
           </p>
