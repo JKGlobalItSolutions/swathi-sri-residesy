@@ -346,7 +346,7 @@ function Home() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-5 bg-primary text-white text-center rounded-5" data-aos="fade-up">
+      <section className="py-5 bg-success text-white text-center rounded-5" data-aos="fade-up">
         <div className="container">
           <h2 className="fw-bold">Reserve Your Stay Now!</h2>
           <p className="lead">Experience comfort and luxury — book your perfect room today before it's gone.</p>
