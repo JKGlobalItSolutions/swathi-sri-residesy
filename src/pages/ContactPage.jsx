@@ -99,7 +99,7 @@ Message: ${form.message}`.replace(/\n/g, "");
 
               <div className="mb-3">
                 <label htmlFor="email" className="form-label">
-                  Your Email
+                  Your email
                 </label>
                 <input
                   type="email"
