@@ -8,7 +8,7 @@ import "./App.css";
 import Header from "./components/common/Header.jsx";
 import Footer from "./components/common/Footer.jsx";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 import {
   Home,
