@@ -3,6 +3,15 @@ import Heading from "../common/Heading";
 import { Link } from "react-router-dom";
 // import { about } from "../data/Data";?
 
+import img1 from "./about-1.jpg";
+import img2 from "./about-2.jpg";
+import img3 from "./about-3.jpg";
+import img4 from "./about-4.jpg";
+
+
+
+
+
 export default function About() {
   return (
     <>
@@ -41,7 +50,7 @@ export default function About() {
                   <img
                     className="img-fluid rounded w-100 wow zoomIn"
                     data-wow-delay="0.1s"
-                    src="/assets/img/about-1.jpg"
+                    src={img1}
                     alt="Swathi Sri Residency Front View"
                   />
                 </div>
@@ -50,7 +59,7 @@ export default function About() {
                   <img
                     className="img-fluid rounded w-100 wow zoomIn"
                     data-wow-delay="0.2s"
-                    src="/assets/img/about-2.jpg"
+                    src={img2}
                     alt="Twin Bed Room"
                   />
                 </div>
@@ -59,7 +68,7 @@ export default function About() {
                   <img
                     className="img-fluid rounded w-100 wow zoomIn"
                     data-wow-delay="0.3s"
-                    src="/assets/img/about-3.jpg"
+                    src={img3}
                     alt="Comfortable Room"
                   />
                 </div>
@@ -68,7 +77,7 @@ export default function About() {
                   <img
                     className="img-fluid rounded w-100 wow zoomIn"
                     data-wow-delay="0.4s"
-                    src="/assets/img/about-4.jpg"
+                    src={img4}
                     alt="Triple Bed Room"
                   />
                 </div>

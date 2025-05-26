@@ -68,28 +68,30 @@ export const socialIcons = [
 
 
 
-export const carouselData = [
-  {
-    img: "../assets/img/carousel-1.jpg",
-    title: "Discover A Brand Luxurious Rooms",
-    subtitle: "luxury living",
-    btn1: "View Room",
-    btn2: "Book Room",
+// export const carouselData = [
+//   {
+//     img: "assets/img/carousel-1.jpg",
+//     title: "Discover A Brand Luxurious Rooms",
+//     subtitle: "luxury living",
+//     btn1: "View Room",
+//     btn2: "Book Room",
 
-    link1: "/rooms", 
-    link2: "/contact",
-  },
-  {
-    img: "../assets/img/carousel-2.jpg",
-    title: "Discover A Brand Luxurious Rooms",
-    subtitle: "luxury living",
-    btn1: "View Room",
-    btn2: "Book Room",
+//     link1: "/rooms", 
+//     link2: "/contact",
+//   },
+
+//   {
+//     img: "../assets/img/carousel-2.jpg",
+//     title: "Discover A Brand Luxurious Rooms",
+//     subtitle: "luxury living",
+//     btn1: "View Room",
+//     btn2: "Book Room",
     
-    link1: "/rooms", 
-    link2: "/contact",
-  },
-];
+//     link1: "/rooms", 
+//     link2: "/contact",
+//   },
+  
+// ];
 
 
 

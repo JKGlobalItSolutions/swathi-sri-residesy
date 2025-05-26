@@ -2,8 +2,12 @@ import React, { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { carouselData } from "../data/Data";
+// import { carouselData } from "../data/Data";
 import { Link } from "react-router-dom";
+
+import img from "./carousel-1.jpg";
+import img1 from "./carousel-2.jpg";
+
 
 export default function Carousel() {
   const sliderRef = useRef(null);
@@ -27,6 +31,37 @@ export default function Carousel() {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
+
+
+
+
+const carouselData = [
+  {
+    img: img,
+    title: "Discover A Brand Luxurious Rooms",
+    subtitle: "luxury living",
+    btn1: "View Room",
+    btn2: "Book Room",
+
+    link1: "/rooms", 
+    link2: "/contact",
+  },
+
+  {
+    img: img1,
+    title: "Discover A Brand Luxurious Rooms",
+    subtitle: "luxury living",
+    btn1: "View Room",
+    btn2: "Book Room",
+    
+    link1: "/rooms", 
+    link2: "/contact",
+  },
+  
+];
+
+
 
   return (
     <div className="container-fluid p-0 mb-5">

@@ -3,22 +3,14 @@ import CommonHeading from "../common/CommonHeading";
 // import { roomItems } from "../data/Data";
 import { Link } from "react-router-dom";
 
-import bad1 from "./bad1.jpg";
-import bad2 from "./bad2.jpg";
-import bad3 from "./bad3.jpg";
-import bad4 from "./bad4.jpg";
-
-import one from "./one.jpg";
-import two from "./two.jpeg"; 
-import three from "./three.jpg";
-import four from "./four.jpg";
+import img1 from "./about-1.jpg";
 
 
 export default function Rooms() {
 
 const roomItems = [
   {
-    img: bad1,
+    img: "../assets/img/bad1.jpg",
     price: "₹2,000/night",
     name: "Single Bed",
     type: "AC",
@@ -33,7 +25,7 @@ const roomItems = [
     darkbtn: "Book Now",
   },
   {
-    img: bad2,
+    img: "../assets/img/bad2.jpg",
     price: "₹2,500/night",
     name: "Double Bed",
     type: "AC",
@@ -49,7 +41,7 @@ const roomItems = [
     darkbtn: "Book Now",
   },
   {
-    img: bad3,
+    img: "../assets/img/bad3.jpg",
     price: "₹3,000/night",
     name: "Triple Bed",
     type: "AC",
@@ -65,7 +57,7 @@ const roomItems = [
     darkbtn: "Book Now",
   },
   {
-    img: bad4,
+    img: "../assets/img/bad4.jpg",
     price: "₹3,500/night",
     name: "Four Bed",
     type: "AC",
@@ -84,7 +76,7 @@ const roomItems = [
 
   // ✅ Corrected Non-AC rooms
   {
-    img: one,
+    img: "../assets/img/one.jpg",
     price: "₹1,500/night",
     name: "Single Bed",
     type: "Non-AC", // ✅ Corrected
@@ -99,7 +91,7 @@ const roomItems = [
     darkbtn: "Book Now",
   },
   {
-    img: two,
+    img: "../assets/img/two.jpeg",
     price: "₹2,000/night",
     name: "Double Bed",
     type: "Non-AC", // ✅ Corrected
@@ -115,7 +107,7 @@ const roomItems = [
     darkbtn: "Book Now",
   },
   {
-    img: three,
+    img: "../assets/img/three.jpg",
     price: "₹2,500/night",
     name: "Triple Bed",
     type: "Non-AC", // ✅ Corrected
@@ -131,7 +123,7 @@ const roomItems = [
     darkbtn: "Book Now",
   },
   {
-    img: four,
+    img: "../assets/img/four.jpg",
     price: "₹3,000/night",
     name: "Four Bed",
     type: "Non-AC", // ✅ Corrected
