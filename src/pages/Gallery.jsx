@@ -3,9 +3,12 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 // Import all images dynamically
-const imageModules = import.meta.glob('../assets/image/homepage/*.{webp,jpg,jpeg,png,svg}', {
-  eager: true,
-});
+const imageModules = import.meta.glob(
+  "../assets/image/homepage/*.{webp,jpg,jpeg,png,svg}",
+  {
+    eager: true,
+  }
+);
 
 function Gallery() {
   const [modalImage, setModalImage] = useState(null);
@@ -16,7 +19,7 @@ function Gallery() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      easing: 'ease-in-out',
+      easing: "ease-in-out",
       once: true,
     });
     return () => AOS.refresh();
@@ -42,7 +45,8 @@ function Gallery() {
         <div className="container-fluid">
           <h2 className="text-center mb-4 fw-bold">Gallery</h2>
           <p className="text-center mb-5 fs-5">
-            Discover the elegance of Swathi Sri Residency through our gallery showcasing beautiful spaces and vibrant living.
+            Discover the elegance of Swathi Sri Residency through our gallery
+            showcasing beautiful spaces and vibrant living.
           </p>
 
           <div className="row g-4">
@@ -85,6 +89,8 @@ function Gallery() {
               </div>
             ))}
           </div>
+
+          
         </div>
       </section>
 
@@ -119,6 +125,9 @@ function Gallery() {
           </div>
         </div>
       )}
+
+
+
     </div>
   );
 }

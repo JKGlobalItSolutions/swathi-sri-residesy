@@ -1,26 +1,48 @@
-import {  HashRouter   as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Gallery from './pages/Gallery';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Rooms from './pages/Rooms';
+import React from "react";
+import "./css/style.css";
+import "./css/bootstrap.min.css";
+import "./css/animate.css";
+import "./css/animate.min.css";
+import "./App.css";
 
-function App() {
+import Header from "./components/common/Header.jsx";
+import Footer from "./components/common/Footer.jsx";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import {
+  Home,
+  Booking,
+  AboutUs,
+  Contact,
+  PageNotFound,
+  Room,
+  // Services,
+  Team,
+  Testimonial,
+  Gallery,
+  Aminitie
+  
+} from "./pages/index.jsx";
+
+export default function App() {
   return (
     <Router>
-      <Navbar />
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/booking" element={<Booking />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/testimonial" element={<Testimonial />} />
+        <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/room" element={<Rooms />} />
+        <Route path="/rooms" element={<Room />} />
+        <Route path="/aminitie" element={<Aminitie />} />
+        <Route path="/*" element={<PageNotFound />} />
+        <Route path="/Gallery" element={<Gallery />} />
+
       </Routes>
       <Footer />
     </Router>
   );
 }
-
-export default App;
